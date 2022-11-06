@@ -38,10 +38,18 @@ body h3 {
   color: #ffffff;
 }
 .App {
-  height: 150vh;
+  height: 100vh;
   background-image: url(https://1.bp.blogspot.com/-_OpHFmQXisU/XS81p6qJWPI/AAAAAAAAGoA/lIMpJpGBxW0TFPT1UciK6bfQtX_1bWPVwCLcBGAs/s1600/Agroneg%25C3%25B3cio.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
 }
 
+footer {
+  background-color: black;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  color: rgb(101, 189, 20);
+}
