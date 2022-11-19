@@ -21,6 +21,24 @@ export default class EditProduct extends Component {
     };
 
   }
+  componentDidMount() {
+    axios
+      .get(
+        "http://localhost:4000/products/edit-product/" +
+          this.props.match.params.id
+      )
+      .then((res) => {
+        this.setState({
+          name: res.data.name,
+          descripcion: res.data.descripcion,
+          precio: res.data.precio,
+          cantidad: res.data.cantidad,
+        });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
   onChangeProductName(e){
     this.setState({ name: e.target.value});
   }
@@ -43,20 +61,31 @@ export default class EditProduct extends Component {
     precio: this.state.precio,
     cantidad: this.state.cantidad,
   };
+
   axios
-  .post("http://localhost:4000/product/edit-product", productObject)
-  .then((res) => console.log(res.data));
-this.setState({ name: "", descripcion: "", precio: "",cantidad: "",});
+  .put(
+    "http://localhost:4000/products/update-product/" +
+      this.props.match.params.id,
+    productObject
+  )
+  .then((res) => {
+    console.log(res.data);
+    console.log("Product successfully updated");
+  })
+  .catch((error) => {
+    console.log(error);
+  });
 
-
-  }
+// Redirect to Student List
+this.props.history.push("/product-list");
+}
 
 
   render() {
     return (
       
     
-      <div class="container d-flex justify-content-center aline-100  bg-light form-wrapper rounded-4 " >
+      <div class="container d-flex justify-content-center aline-100  bg-light form-wrapper rounded-4  my-5" >
           
 
   <Form onSubmit ={this.onSubmit} >
@@ -127,9 +156,9 @@ this.setState({ name: "", descripcion: "", precio: "",cantidad: "",});
             size="lg"
             block="block"
             type="submit"
-            className="mt-4"
+            className="mt-4  my-3"
           >
-            Editar Producto
+            Actualizar Producto
           </Button>
         </Form>
   
