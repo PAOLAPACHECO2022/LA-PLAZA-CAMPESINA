@@ -58,30 +58,23 @@ function App() {
         <span className="ml-3 w-20 h5 font-weight-bold">LA PLAZA CAMPESINA</span>
       </a>
       </Navbar.Brand>
-
       <Form.Group className="w-50 h7 px-20">
-
       <Button 
-            className="bg-black  mt-2 w-25"
-          
+            className="bg-black  mt-2 w-25"          
             >
              <a href="/home">Home</a>
       </Button>
       <Button 
-            className="bg-black  mt-2 w-25 "
-           
+            className="bg-black  mt-2 w-25 "           
             >
              <a href="/">Login</a>
       </Button>
       <Button
-            className=" mt-2 w-25 bg-black "
-        
+            className=" mt-2 w-25 bg-black "        
             >
              <a href="/signup">Register</a>
-      </Button>
-            
-      </Form.Group>
-      
+      </Button>            
+      </Form.Group>      
                             <Dropdown.Header>
                             <CDBBtn className="mx-3 p-2 rounded-3">
                             <img
@@ -93,11 +86,7 @@ function App() {
         />{' '}
         
         <Dropdown.Item href="/ " className="20">Cerrar sesión</Dropdown.Item>
-    </CDBBtn> </Dropdown.Header>
-                         
-                        
-
-      
+    </CDBBtn> </Dropdown.Header>                      
     </Container>
             </Navbar>
           </header>

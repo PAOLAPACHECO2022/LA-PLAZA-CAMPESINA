@@ -125,7 +125,8 @@ export default class Search extends Component {
     console.log("Prueba")
     const self = this;
     e.preventDefault();
-    const  token = window.localStorage.getItem("token");
+    const  token = window.localStorage.getItem("auth-token");
+    window.localStorage.setItem("token", token);
     console.log(token);
     const config = {
       headers: { Authorization: `Bearer ${token}` },
