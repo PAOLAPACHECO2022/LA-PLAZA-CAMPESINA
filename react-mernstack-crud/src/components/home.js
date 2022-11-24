@@ -5,8 +5,11 @@ import Carousel from 'react-bootstrap/Carousel';
 
 
 export default class Home extends Component {
-  render() {
-    return (
+  
+  render( ) {
+    
+    return ( 
+      
         // eslint-disable-next-line no-undef
         <Carousel >
 

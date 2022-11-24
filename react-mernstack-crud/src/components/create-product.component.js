@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import { Redirect } from "react-router";
 
 export default class CreateProduct extends Component {
 
@@ -51,10 +52,17 @@ export default class CreateProduct extends Component {
 this.setState({ name: "", descripcion: "", precio: "",cantidad: "",});
 
 
-  }
+  };
 
 
   render() {
+    const { redirect } = this.state;
+    if (redirect) {
+      return (
+        <Redirect to={{ pathname: "/CreateProduct", state: { id: this.state.id } }} />
+      );
+    }
+  
     return (
       
     
@@ -126,7 +134,7 @@ this.setState({ name: "", descripcion: "", precio: "",cantidad: "",});
             size="lg"
             block="block"
             type="submit"
-            className="mt-4 my-3"
+            className="mt-2 my-3"
           >
             Guardar Producto
           </Button>
@@ -136,7 +144,7 @@ this.setState({ name: "", descripcion: "", precio: "",cantidad: "",});
             size="lg"
             block="block"
             type="submit"
-            className="mt-4 my-3"
+            className="mt-2  my-3 mx-5"
             href="/product-list"
           >
            

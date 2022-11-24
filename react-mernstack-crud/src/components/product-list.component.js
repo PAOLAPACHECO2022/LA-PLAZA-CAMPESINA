@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import axios from "axios";
 import Table from "react-bootstrap/Table";
 import ProductTableRow from "./ProductTableRow";
+import { Button  
+} from "react-bootstrap";
 
 export default class ProductList extends Component {
   constructor(props) {
@@ -31,9 +33,12 @@ export default class ProductList extends Component {
   }
 
   render() {
-    return (
-      <div className="table-wrapper">
-        <Table striped bordered hover>
+    return (   
+        <Table striped bordered hover  className="my-5 mt-4">
+           
+  
+ 
+  
           <thead class="bg-warning form-wrapper rounded-4">
             <tr>
               <th>Nombre</th>
@@ -44,8 +49,18 @@ export default class ProductList extends Component {
             </tr>
           </thead>
           <tbody>{this.DataTable()}</tbody>
+
+          <Button
+    type="button"
+    className="btn btn-success h5 align-center my-5 mt-4 w-50 m-auto" 
+     href="/create-product"
+    >
+    Crear nuevo Producto
+
+  </Button>
         </Table>
-      </div>
+        
+      
     );
   }
 }

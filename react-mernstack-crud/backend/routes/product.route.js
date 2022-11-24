@@ -82,8 +82,8 @@ router.route("/delete-product/:id").delete((req, res, next) => {
       return next(error);   // se puede modificar según los intereses  
     } else {
       res.status(200).json({
-        msg: data,
-      });
+      msg: data});
+
     }
   });
 });

@@ -157,6 +157,7 @@ this.props.history.push("/product-list");
             block="block"
             type="submit"
             className="mt-4  my-3"
+       
           >
             Actualizar Producto
           </Button>
