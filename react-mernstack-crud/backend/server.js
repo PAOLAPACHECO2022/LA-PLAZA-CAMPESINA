@@ -10,7 +10,7 @@ const pruductRoute = require("../backend/routes/product.route");
 
 mongoose.Promise = global.Promise;
 // eslint-disable-next-line no-undef
-mongoose.connect('mongodb+srv://laplaza:laplaza2022@cluster0.qpcdev0.mongodb.net/reactdb?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true }).then(
+mongoose.connect('mongodb+srv://laplazac4:laplazac4@cluster0.qpcdev0.mongodb.net/reactdb?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true }).then(
   () => {
     console.log("Database sucessfully connected!");
   },
