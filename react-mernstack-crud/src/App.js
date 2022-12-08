@@ -1,19 +1,17 @@
-//import "./App.css";
 import React from "react";
 import Navbar from "react-bootstrap/Navbar";
+import Nav from 'react-bootstrap/Nav';
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import {  CDBBtn, CDBIcon, CDBBox} from 'cdbreact';
-import { Form, Button} from "react-bootstrap";
+//import { Form, Button} from "react-bootstrap";
 import { Dropdown} from 'react-bootstrap';
 import { Link } from "react-router-dom";
 
 import "bootstrap/dist/css/bootstrap.css";
-
-
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -34,12 +32,13 @@ import Profile from "./components/myperfil.component";
 
 
 
+
 function App() {
   return (
     <Router>
     <div className="App">
-   
-   <Navbar collapseOnSelect expand="lg" bg="black" variant="dark">
+
+     <Navbar collapseOnSelect expand="lg" bg="black" variant="dark">
       <Container>
         <Navbar.Brand href="/">  <a href="/" className="d-flex align-items-center p-0 text-dark">
       <Link to={"/create-product"} className="nav-link">
@@ -64,8 +63,8 @@ function App() {
           </Nav>
           <Nav>
           <Dropdown.Header>
-         <CDBBtn className="mx-3 p-2 rounded-3">
-         <img
+                            <CDBBtn className="mx-3 p-2 rounded-3">
+                            <img
           alt=""
           src="https://i.pinimg.com/originals/a8/77/bd/a877bd50186346533f3d389fb59d2ca1.jpg"
           width="30"
@@ -74,12 +73,14 @@ function App() {
         />{' '}
         
         <Dropdown.Item href="/ " className="20">Cerrar sesión</Dropdown.Item>
-        </CDBBtn> </Dropdown.Header> 
+    </CDBBtn> </Dropdown.Header> 
           </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
-          
+
+
+
           <Container>
           <Row>
             <Col md={12}>
