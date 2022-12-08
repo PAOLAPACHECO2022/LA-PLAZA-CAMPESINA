@@ -39,13 +39,13 @@ function App() {
     <Router>
     <div className="App">
    
-              <Navbar collapseOnSelect expand="lg" bg="black" variant="dark">
+   <Navbar collapseOnSelect expand="lg" bg="black" variant="dark">
       <Container>
         <Navbar.Brand href="/">  <a href="/" className="d-flex align-items-center p-0 text-dark">
       <Link to={"/create-product"} className="nav-link">
           <img
           alt=""
-          src="https://thumbs.dreamstime.com/b/frutas-y-verduras-mezcladas-con-un-fondo-negro-frutas-61776072.jpg"
+          src="/laplaza.gif"
           width="100"
           height="100"
           className="d-inline-block align-top"
@@ -64,8 +64,8 @@ function App() {
           </Nav>
           <Nav>
           <Dropdown.Header>
-                            <CDBBtn className="mx-3 p-2 rounded-3">
-                            <img
+         <CDBBtn className="mx-3 p-2 rounded-3">
+         <img
           alt=""
           src="https://i.pinimg.com/originals/a8/77/bd/a877bd50186346533f3d389fb59d2ca1.jpg"
           width="30"
@@ -74,7 +74,7 @@ function App() {
         />{' '}
         
         <Dropdown.Item href="/ " className="20">Cerrar sesión</Dropdown.Item>
-    </CDBBtn> </Dropdown.Header> 
+        </CDBBtn> </Dropdown.Header> 
           </Nav>
         </Navbar.Collapse>
       </Container>
