@@ -38,17 +38,14 @@ function App() {
   return (
     <Router>
     <div className="App">
-    <header className="App-header">
-            <Navbar bg="black" variant="dark">
-            <Container>
-    
-    <Navbar.Brand>        
-    
-    <a href="/" className="d-flex align-items-center p-0 text-dark">
+   
+              <Navbar collapseOnSelect expand="lg" bg="black" variant="dark">
+      <Container>
+        <Navbar.Brand href="/">  <a href="/" className="d-flex align-items-center p-0 text-dark">
       <Link to={"/create-product"} className="nav-link">
           <img
           alt=""
-          src="/laplaza.gif"
+          src="https://thumbs.dreamstime.com/b/frutas-y-verduras-mezcladas-con-un-fondo-negro-frutas-61776072.jpg"
           width="100"
           height="100"
           className="d-inline-block align-top"
@@ -56,26 +53,17 @@ function App() {
           
       </Link>
         <span className="ml-3 w-20 h5 font-weight-bold">LA PLAZA CAMPESINA</span>
-      </a>
-      </Navbar.Brand>
-      <Form.Group className="w-50 h7 px-20">
-      <Button 
-            className="bg-black  mt-2 w-25"          
-            >
-             <a href="/home">Home</a>
-      </Button>
-      <Button 
-            className="bg-black  mt-2 w-25 "           
-            >
-             <a href="/">Login</a>
-      </Button>
-      <Button
-            className=" mt-2 w-25 bg-black "        
-            >
-             <a href="/signup">Register</a>
-      </Button>            
-      </Form.Group>      
-                            <Dropdown.Header>
+      </a></Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link href="/home">Home</Nav.Link>
+            <Nav.Link href="/">Login</Nav.Link>
+            <Nav.Link href="/signup">Register</Nav.Link>
+            
+          </Nav>
+          <Nav>
+          <Dropdown.Header>
                             <CDBBtn className="mx-3 p-2 rounded-3">
                             <img
           alt=""
@@ -86,10 +74,12 @@ function App() {
         />{' '}
         
         <Dropdown.Item href="/ " className="20">Cerrar sesión</Dropdown.Item>
-    </CDBBtn> </Dropdown.Header>                      
-    </Container>
-            </Navbar>
-          </header>
+    </CDBBtn> </Dropdown.Header> 
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+          
           <Container>
           <Row>
             <Col md={12}>
