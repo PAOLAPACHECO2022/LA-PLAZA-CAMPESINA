@@ -104,7 +104,8 @@ class LoginForm extends Component {
               to="/signup"
             >
               <span className="h5 text-white  btn-block w-50 m-auto">Registrarse</span>
-          </Form.Group>
+          </Link>
+        </Form.Group>
         </Form>
       </Col>
 
