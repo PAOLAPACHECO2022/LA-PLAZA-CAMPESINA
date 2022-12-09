@@ -1,7 +1,8 @@
 
 module.exports = {
   mongoURI:
-    "mongodb+srv://laplazac4:laplazac4@cluster0.nvds2hh.mongodb.net/reactdb?retryWrites=true&w=majority",
+  
+    "mongodb+srv://laplaza:laplaza2022@cluster0.qpcdev0.mongodb.net/reactdb?retryWrites=true&w=majority",
   secretOrKey: "secret",
 };
 
